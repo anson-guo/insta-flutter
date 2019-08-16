@@ -19,43 +19,45 @@ class InstaHome extends StatelessWidget {
     ],
   );
 
+  final bottomBar = Container(
+    color: Colors.white,
+    height: 50,
+    alignment: Alignment.center,
+    child: BottomAppBar(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: Icon(Icons.add_box),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: Icon(Icons.favorite),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: Icon(Icons.account_box),
+            onPressed: null,
+          )
+        ],
+      ),
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: topBar,
       body: InstaBody(),
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        height: 60,
-        alignment: Alignment.center,
-        child: BottomAppBar(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.search),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: Icon(Icons.add_box),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: Icon(Icons.favorite),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: Icon(Icons.account_box),
-                onPressed: null,
-              )
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: bottomBar,
     );
   }
 }
